@@ -13,4 +13,4 @@ jobs:
       - run:
           echo "test $GITHUB_REF"
       - run:
-          echo "Name Event $github.event_name"
+          echo "$github.run_number de RUN déjà"
