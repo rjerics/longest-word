@@ -12,3 +12,5 @@ jobs:
           python --version
       - run:
           echo "test $GITHUB_REF"
+      - run:
+          echo "Name Event ${{ github.event_name }}"
