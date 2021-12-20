@@ -15,10 +15,5 @@ jobs:
           echo "test $GITHUB_REF"
       - run:
           echo ${{ github.run_number }} " RUN déjà"
-on: [Pull Request]
-jobs:
-  test Pull Request:
-    steps:
-      - run:
-          echo ${{ github.run_number }} " RUN déjà"
+
 
