@@ -10,3 +10,5 @@ jobs:
           python-version: '3.9'
       - run: |
           python --version
+      - run:
+          echo "test $GITHUB_REF"
