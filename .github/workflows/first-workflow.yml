@@ -14,3 +14,11 @@ jobs:
           echo "test $GITHUB_REF"
       - run:
           echo ${{ github.run_number }} " RUN déjà"
+      - run:  
+          uses: Matthieu Rousseau/action-slack-notify@v2
+          env:
+            SLACK_CHANNEL: general
+            SLACK_MESSAGE: ${{ github.run_number }} " RUN déjà"
+            SLACK_TITLE: Post Title
+            SLACK_USERNAME: Matthieu Rousseau
+            SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
