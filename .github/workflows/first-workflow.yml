@@ -15,7 +15,7 @@ jobs:
           echo "test $GITHUB_REF"
       - run:
           echo ${{ github.run_number }} " RUN déjà"
-      - run:  
+      - name: Slack Notification
           env:
             SLACK_CHANNEL: general
             SLACK_MESSAGE: ${{ github.run_number }} " RUN déjà"
