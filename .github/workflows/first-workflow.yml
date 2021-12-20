@@ -15,10 +15,10 @@ jobs:
           echo "test $GITHUB_REF"
       - run:
           echo ${{ github.run_number }} " RUN déjà"
-      - name: Slack Notification
-        env:
-          SLACK_CHANNEL: general
-          SLACK_MESSAGE: ${{ github.run_number }} " RUN déjà"
-          SLACK_TITLE: Post Title
-          SLACK_USERNAME: Matthieu Rousseau
-          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+on: [Pull Request]
+jobs:
+  test Pull Request:
+    steps:
+      - run:
+          echo ${{ github.run_number }} " RUN déjà"
+
